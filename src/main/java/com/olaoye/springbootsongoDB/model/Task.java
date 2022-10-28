@@ -8,6 +8,8 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDate;
+
 @Document(collation = "tasks")
 @Setter
 @Getter
@@ -18,4 +20,6 @@ public class Task {
     private String taskId;
     private String description;
     private Status status;
+    private LocalDate createdOn;
+    private LocalDate updatedOn;
 }
